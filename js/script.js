@@ -2,6 +2,25 @@
    Mantido enxuto de propósito (performance / boas práticas de SEO técnico) */
 
 document.addEventListener("DOMContentLoaded", function () {
+  /* Imagens abaixo da primeira dobra: carregamento sob demanda. */
+  var deferredBackgrounds = document.querySelectorAll("[data-bg]");
+  function loadBackground(card) {
+    card.style.backgroundImage = 'url("' + card.dataset.bg + '")';
+  }
+  if ("IntersectionObserver" in window) {
+    var backgroundObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          loadBackground(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "200px 0px" });
+    deferredBackgrounds.forEach(function (card) { backgroundObserver.observe(card); });
+  } else {
+    deferredBackgrounds.forEach(loadBackground);
+  }
+
   /* Menu mobile */
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".main-nav");
@@ -12,10 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* Ano automático no rodapé */
-  document.querySelectorAll("[data-year]").forEach(function (el) {
-    el.textContent = new Date().getFullYear();
-  });
+var year = new Date().getFullYear();
+
+document.querySelectorAll("[data-year]")
+.forEach(function(el){
+    el.textContent = year;
+});
 
   /* Clique-para-ligar / WhatsApp: registra intenção (placeholder para GA4) */
   document.querySelectorAll("[data-cta]").forEach(function (el) {

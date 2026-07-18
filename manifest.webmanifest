@@ -1,0 +1,18 @@
+{
+  "name": "J.Batista Guincho 24 Horas",
+  "short_name": "J.Batista Guincho",
+  "description": "Guincho, reboque e socorro mecânico 24 horas em Itapema e região.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050b16",
+  "theme_color": "#0a1830",
+  "icons": [
+    {
+      "src": "/images/logo-jb-icon.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.jbatistaguincho.com.br/sitemap.xml
+Sitemap: https://jbatistaguincho.vercel.app/sitemap.xml
