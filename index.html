@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +16,24 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow">
 
-<link rel="icon" href="images/logo-jbatista-completo.png" type="image/png" sizes="48x48">
+<!-- 1. CORREÇÃO DO FAVICON: Caminho completo e absoluto -->
+<link rel="icon" href="https://jbatistaguincho.vercel.app/images/logo-jbatista-completo.png" type="image/png" sizes="48x48">
+<link rel="shortcut icon" href="https://jbatistaguincho.vercel.app/images/logo-jbatista-completo.png" type="image/png">
 
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="preload" href="css/style.css" as="style">
-
 <link rel="stylesheet" href="css/style.css">
+
+<!-- 2. CORREÇÃO DO NOME DO SITE: Schema isolado do tipo WebSite obrigatório pro Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "J.Batista Guincho 24 Horas",
+  "alternateName": ["J.Batista Guincho", "Guincho J.Batista"],
+  "url": "https://jbatistaguincho.vercel.app/"
+}
+</script>
 
 <!-- Dados Estruturados: AutomotiveBusiness (LocalBusiness) -->
 <script type="application/ld+json">
@@ -31,17 +41,16 @@
   "@context": "https://schema.org",
   "@type": "AutomotiveBusiness",
   "name": "J.Batista Guincho 24 Horas",
-  "alternateName": ["J.Batista Guincho", "Guincho J.Batista"],
-  "image": "https://www.jbatistaguincho.vercel.app/images/jbatista-guincho-caminhao.webp",
-  "url": "https://www.jbatistaguincho.vercel.app/",
+  "image": "https://jbatistaguincho.vercel.app/images/jbatista-guincho-caminhao.webp",
+  "url": "https://jbatistaguincho.vercel.app/",
   "telephone": "+5547999832710",
   "priceRange": "$$",
   "areaServed": [
-  { "@type": "City", "name": "Itapema" },
-  { "@type": "City", "name": "Balneário Camboriú" },
-  { "@type": "City", "name": "Camboriú" },
-  { "@type": "City", "name": "Tijucas" },
-  { "@type": "City", "name": "Itajaí" }
+    { "@type": "City", "name": "Itapema" },
+    { "@type": "City", "name": "Balneário Camboriú" },
+    { "@type": "City", "name": "Camboriú" },
+    { "@type": "City", "name": "Tijucas" },
+    { "@type": "City", "name": "Itajaí" }
   ],
   "address": {
     "@type": "PostalAddress",
@@ -70,7 +79,7 @@
 }
 </script>
 
-<!-- Dados Estruturados: FAQPage (mesmo conteúdo exibido na seção #faq) -->
+<!-- Dados Estruturados: FAQPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -105,32 +114,9 @@
 }
 </script>
 
-<!--
-  DADOS ESTRUTURADOS DE AVALIAÇÕES (Review / AggregateRating)
-  -----------------------------------------------------------------
-  Propositalmente DESATIVADO. Nunca publique nota/número de avaliações
-  fictícios: isso viola as diretrizes do Google e pode gerar penalização
-  manual. Assim que a empresa tiver avaliações reais no Google Business
-  Profile, preencha os valores abaixo com os números reais e remova os
-  comentários <script type="application/ld+json"> ... </script> para
-  ativar o bloco.
-
-  {
-    "@context": "https://schema.org",
-    "@type": "AutomotiveBusiness",
-    "name": "J.Batista Guincho 24 Horas",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "SUBSTITUIR_PELA_NOTA_REAL",
-      "reviewCount": "SUBSTITUIR_PELA_QTD_REAL"
-    }
-  }
--->
-
-<meta name="google-site-verification" content="XmPUxGmBCLtanrgr_U7ZO3r1abCZrq45vYKHdnxs1ok" />
+<meta name="google-site-verification" content="XmPUxGmBCLtanrgr_U7ZO3r1abCZrq45vYKHdnxs1ok">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R05H2DJ7PQ"></script>
 <script src="js/analytics.js"></script>
-
 </head>
 <body>
 
